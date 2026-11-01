@@ -3,71 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Politique de confidentialité — rclone-pi-backup</title>
+<title>Confidentialité — rclone-pi-backup</title>
 <style>
-  :root { color-scheme: light dark; }
-  body { max-width: 42rem; margin: 3rem auto; padding: 0 1.25rem;
-         font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  h1 { font-size: 1.6rem; line-height: 1.25; }
-  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  body { max-width: 38rem; margin: 3rem auto; padding: 0 1.25rem;
+         font: 16px/1.6 system-ui, sans-serif; }
   code { background: rgba(127,127,127,.18); padding: .1em .35em; border-radius: 4px; }
-  footer { margin-top: 3rem; font-size: .85rem; opacity: .75; }
 </style>
 </head>
 <body>
 
-<h1>Politique de confidentialité — application <code>rclone-pi-backup</code></h1>
+<h1>Confidentialité — <code>rclone-pi-backup</code></h1>
 
-<p>Dernière mise à jour : 1<sup>er</sup> novembre 2026.</p>
+<p>Mis à jour le 1<sup>er</sup> novembre 2026. Éditeur : <strong>bobmorane83</strong> —
+<a href="mailto:bmorane83@gmail.com">bmorane83@gmail.com</a>.</p>
 
-<p>Cette page décrit le traitement des données par l'application OAuth
-<strong>rclone-pi-backup</strong>, un client Google que son unique utilisateur
-installe sur son propre Raspberry Pi pour sauvegarder ses serveurs personnels
-vers son propre espace Google Drive.</p>
+<p>Application OAuth personnelle, installée sur le Raspberry Pi de son éditeur pour
+sauvegarder ses serveurs vers son propre Google Drive.</p>
 
-<h2>Responsable</h2>
-<p>Vincent Pillet — contact : <a href="mailto:bmorane83@gmail.com">bmorane83@gmail.com</a>.</p>
-
-<h2>Données auxquelles l'application accède</h2>
-<p>L'application demande un unique accès à l'API Google Drive
-(<code>https://www.googleapis.com/auth/drive</code>), utilisé exclusivement par
-les scripts de sauvegarde exécutés sur le Raspberry Pi de l'utilisateur, pour :</p>
 <ul>
-  <li>déposer des archives de sauvegarde dans des dossiers Google Drive de l'utilisateur
-      (base de données Home Assistant, base de données TeslaMate, configuration de routeur) ;</li>
-  <li>lister et supprimer les archives de ces mêmes dossiers afin d'appliquer la
-      rétention (les dumps les plus anciens sont purgés).</li>
+  <li><strong>Accès demandé</strong> : Google Drive uniquement (<code>auth/drive</code>), pour
+      déposer, lister et purger des archives de sauvegarde dans ses propres dossiers.</li>
+  <li><strong>Aucune autre donnée</strong> lue (ni Gmail, ni Contacts, ni Agenda, ni profil) ;
+      aucun envoi à un tiers, aucune publicité, aucun profilage.</li>
+  <li><strong>Jetons</strong> stockés sur le Raspberry Pi seul ; archives conservées dans le
+      Drive de l'utilisateur et purgées selon sa rétention locale.</li>
+  <li><strong>Révocation</strong> à tout moment :
+      <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</li>
 </ul>
-<p>Aucune autre donnée n'est demandée : ni Gmail, ni Contacts, ni Agenda, ni profil.</p>
-
-<h2>Ce que l'application ne fait pas</h2>
-<ul>
-  <li>Aucun transfert de données à un tiers : les fichiers restent dans le Drive de l'utilisateur.</li>
-  <li>Aucune publicité, aucun profilage, aucune revente de données.</li>
-  <li>Aucun serveur intermédiaire : le Pi dialogue directement avec l'API Google.</li>
-</ul>
-
-<h2>Stockage et durée de conservation</h2>
-<p>Les jetons d'accès OAuth sont stockés uniquement sur le Raspberry Pi de
-l'utilisateur, dans des fichiers en lecture restreinte au compte système qui
-exécute les sauvegardes. Les archives conservées dans Google Drive suivent la
-politique de rétention configurée localement (par exemple : 2 dumps quotidiens
-conservés en ligne, puis suppression automatique).</p>
-
-<h2>Vos droits et la révocation</h2>
-<p>L'accès peut être retiré à tout moment depuis la page
-<a href="https://myaccount.google.com/connections">Applications tierces ayant accès
-à votre compte</a>, ou en supprimant les jetons sur l'appareil. La révocation
-interrompt immédiatement toute nouvelle opération.</p>
-
-<h2>Modifications</h2>
-<p>Toute évolution de cette politique sera publiée sur cette page, avec la date
-de mise à jour correspondante.</p>
-
-<footer>
-  <p>Application à usage strictement personnel. Cette page ne collecte aucune
-  donnée : elle est un simple document statique hébergé par GitHub Pages.</p>
-</footer>
 
 </body>
 </html>
